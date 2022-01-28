@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -euo pipefail
+set -uo pipefail +e
 
 source "${BASH_SOURCE%/*}/../base/base.sh"
 

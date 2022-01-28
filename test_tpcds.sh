@@ -4,7 +4,7 @@ set -ex
 
 PRESTO="../presto/presto-cli/target/presto-cli-0.266-SNAPSHOT-executable.jar"
 
-QUERIES=$(ls tpcds-sql/queries/ | sort -n -t q -k 2)
+QUERIES=$(ls tpcds-sql/queries | sort -n -t q -k 2)
 
 for QUERY in ${QUERIES}; do
 	echo "Exec query ${QUERY}"

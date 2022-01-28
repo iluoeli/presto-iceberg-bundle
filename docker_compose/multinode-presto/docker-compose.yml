@@ -1,7 +1,8 @@
 version: '3.3'
 services:
   presto-master:
-    build: ${DOCKER_CONF_LOCATION}/presto
+    #build: ${DOCKER_CONF_LOCATION}/presto
+    image: beinan6666/presto:1.0
     hostname: presto-master
     command: /docker/volumes/conf/presto/presto-launcher-wrapper.sh multinode-master run
     ports:
@@ -16,7 +17,8 @@ services:
       - ../../conf/presto/etc/multinode-master-jvm.config:/docker/volumes/conf/presto/etc/jvm.config
 
   presto-worker:
-    build: ${DOCKER_CONF_LOCATION}/presto
+    #build: ${DOCKER_CONF_LOCATION}/presto
+    image: beinan6666/presto:1.0
     hostname: presto-worker
     command: /docker/volumes/conf/presto/presto-launcher-wrapper.sh multinode-worker run
     ports:
